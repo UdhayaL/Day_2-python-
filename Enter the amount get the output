@@ -1,0 +1,21 @@
+I want a change money  from the bank  I don't know how they split it. kindly help to tell how they can split the amount. Changes have in the bank is 500,200,100,50,20,10,5,1
+input :
+amount value 345
+output :
+the amount of 500 is 0
+the amount of 200 is 1
+the amount of 100 is 1
+the amount of 50 is 0
+the amount of 20 is 2
+the amount of 5 is 1
+the amount of 2 is 0
+the amount of 1 is 0
+
+amount = int(input("Enter the amount: "))
+
+denominations = [500, 200, 100, 50, 20, 10, 5, 2, 1]
+
+for d in denominations:
+    count = amount // d      # number of notes/coins of this denomination
+    print(f"the amount of {d} is {count}")
+    amount = amount % d      # reduce the remaining amount
